@@ -30,7 +30,9 @@ tell(W) => null // adds the supplied argument to the writer array
 get() => S // yields the current state managed by the state monad
 gets(S => a) => a // given a function, yields the result of applying
                   // that function to the current state in the state monad
-
+put(S) => null // sets the current state of the state monad to the supplied value
+modify(S => S) => null // sets the current state of the state monad to the result
+                       // of applying the supplied function to the current state
 ```
 
 monad control flow is obtained using generators. for example:
@@ -41,6 +43,6 @@ const comp = (function* () {
 })();
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4MTQzODY4NDksMjAyNjM3MzE1LC0xNT
-k2NDY2MDAwXX0=
+eyJoaXN0b3J5IjpbOTI0MzIwMTEyLDIwMjYzNzMxNSwtMTU5Nj
+Q2NjAwMF19
 -->
