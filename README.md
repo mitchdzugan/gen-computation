@@ -11,6 +11,8 @@
 	                   // of `comp`
 }
 ```
+
+monad control flow is obtained using generators. 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjAyNjExODg4MCwtMTU5NjQ2NjAwMF19
+eyJoaXN0b3J5IjpbLTExNjc3MTczOCwtMTU5NjQ2NjAwMF19
 -->
