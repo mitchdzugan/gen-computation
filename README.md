@@ -26,7 +26,11 @@ The rest of the API functions are as follows:
 ask() => R // yields the value stored in the reader environment
 asks(R => a) => a // given a function, yields the result of applying
                   // that function to the value in the reader environment
-tell(W) => null // a
+tell(W) => null // adds the supplied argument to the writer array
+get() => S // yields the current state managed by the state monad
+gets(S => a) => a // given a function, yields the result of applying
+                  // that function to the current state in the state monad
+
 ```
 
 monad control flow is obtained using generators. for example:
@@ -37,6 +41,6 @@ const comp = (function* () {
 })();
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTYxMDgyNzM2MCwyMDI2MzczMTUsLTE1OT
-Y0NjYwMDBdfQ==
+eyJoaXN0b3J5IjpbLTE4MTQzODY4NDksMjAyNjM3MzE1LC0xNT
+k2NDY2MDAwXX0=
 -->
