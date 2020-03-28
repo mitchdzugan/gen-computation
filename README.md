@@ -40,20 +40,22 @@ monad control flow is obtained using generators.
 Here is an example predominantly using
 
 ```javascript
-const getNodesWithChildrenSum = (target, node) (function* () {
-	if (!node) {
-		return 0;
-	}
-	const leftSum = yield* getNodesWithChildrenSum(node.left);
-	const rightSum = yield* getNodesWithChildrenSum(node.right);
-	const childrenSum = leftSum + rightSum;
-	if (childrenSum === target) {
-		yield* tell(node.value);
-	}
-	return childrenSum;
-})();
+const getNodesWithChildrenSum = (target, root) => {
+	const comp = (node) => (function* () {
+		if (!node) {
+			return 0;
+		}
+		const leftSum = yield* comp(node.left);
+		const rightSum = yield* comp(node.right);
+		const childrenSum = leftSum + rightSum;
+		if (childrenSum === target) {
+			yield* tell(node.value);
+		}
+		return childrenSum;
+	})();
+};
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI0NDYxMTE5MywyMDI2MzczMTUsLTE1OT
-Y0NjYwMDBdfQ==
+eyJoaXN0b3J5IjpbLTE2MjgzNDkxNTYsMjAyNjM3MzE1LC0xNT
+k2NDY2MDAwXX0=
 -->
