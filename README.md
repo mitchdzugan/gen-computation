@@ -37,7 +37,6 @@ modify(S => S) => null // sets the current state of the state monad to the resul
 
 monad control flow is obtained using generators. 
 
-Here is an example predominantly using
 
 ```javascript
 const getNodesWithChildrenSum = (target, root) => {
@@ -53,9 +52,10 @@ const getNodesWithChildrenSum = (target, root) => {
 		}
 		return childrenSum;
 	})();
+	return exec()(root).writer;
 };
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2MjgzNDkxNTYsMjAyNjM3MzE1LC0xNT
-k2NDY2MDAwXX0=
+eyJoaXN0b3J5IjpbMzA2MTkwMDU4LDIwMjYzNzMxNSwtMTU5Nj
+Q2NjAwMF19
 -->
