@@ -71,8 +71,44 @@ We could use this function to find the ID of all nodes in the following tree who
 ["000", 6]  ["001", 3]                    ["110", 2]  ["101", 2]          ["111", 1]
                                      ["1100", 1]
 ```
-and it wo
+```javascript
+const tree = {
+	id: "root",
+	value: 8,
+	left: {
+		id: "0",
+		value: 7,
+		left: {
+			id: "00",
+			value: 4,
+			left: { id: "000", value: 6 },
+			right: { id: "001", value: 3 },
+		},
+		right: { id: "01", value: 9 },
+	},
+	right: {
+		id: "1",
+		value: 5,
+		left: {
+			id: "10",
+			value: 1,
+			left: {
+				id: "110", value: 2,
+				left: { id: "1100", value: 1 }
+			},
+			right: { id: "101", value: 2 }
+		},
+		right: {
+			id: "11",
+			value: 2,
+			right: { id: "111", value: 1 }
+		}
+	},
+};
+expect(getNodesWithChildrenSum(9, tree)).toEqual(["00", "1"]);
+
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODU1MzEwNzMyLC0xNTc1OTc1NTE4LDIwMj
-YzNzMxNSwtMTU5NjQ2NjAwMF19
+eyJoaXN0b3J5IjpbMTI0NjU2MDA1Myw4NTUzMTA3MzIsLTE1Nz
+U5NzU1MTgsMjAyNjM3MzE1LC0xNTk2NDY2MDAwXX0=
 -->
