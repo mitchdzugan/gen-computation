@@ -63,7 +63,16 @@ const getNodesWithChildrenSum = (target, root) => {
 	return exec()(root).writer;
 };
 ```
+We could use this function to find the ID of all nodes in the following tree whose children sum to the value: 9.
+```
+                                    ["root", 8]
+                ["0", 7]                                   ["1", 5]
+      ["00", 4]          ["01", 9]              ["10", 1]           ["11", 2]
+["000", 6]  ["001", 3]                    ["110", 2]  ["101", 2]          ["111", 1]
+                                     ["1100", 1]
+```
+and it wo
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1NzU5NzU1MTgsMjAyNjM3MzE1LC0xNT
-k2NDY2MDAwXX0=
+eyJoaXN0b3J5IjpbODU1MzEwNzMyLC0xNTc1OTc1NTE4LDIwMj
+YzNzMxNSwtMTU5NjQ2NjAwMF19
 -->
