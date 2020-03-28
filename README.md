@@ -44,10 +44,16 @@ const getNodesWithChildrenSum = (target, node) (function* () {
 	if (!node) {
 		return 0;
 	}
-	const left = yield* 
+	const leftSum = yield* getNodesWithChildrenSum(node.left);
+	const rightSum = yield* getNodesWithChildrenSum(node.right);
+	const childrenSum = leftSum + rightSum;
+	if (childrenSum === target) {
+		yield* tell(node.value);
+	}
+	return childrenSum;
 })();
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3NjI0NTIyNzgsMjAyNjM3MzE1LC0xNT
-k2NDY2MDAwXX0=
+eyJoaXN0b3J5IjpbMTI0NDYxMTE5MywyMDI2MzczMTUsLTE1OT
+Y0NjYwMDBdfQ==
 -->
