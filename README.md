@@ -56,11 +56,11 @@ const getNodesWithChildrenSum = (target, root) => {
 		const rightSum = yield* comp(node.right);
 		const childrenSum = leftSum + rightSum;
 		if (childrenSum === target) {
-			yield* tell(node.value);
+			yield* _.tell(node.id);
 		}
-		return childrenSum;
+		return childrenSum + node.value;
 	})();
-	return exec()(root).writer;
+	return _.exec()(comp(root)).writer;
 };
 ```
 We could use this function to find the ID of all nodes in the following tree whose children sum to the value: 9.
@@ -109,6 +109,6 @@ expect(getNodesWithChildrenSum(9, tree)).toEqual(["00", "1"]);
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI0NjU2MDA1Myw4NTUzMTA3MzIsLTE1Nz
+eyJoaXN0b3J5IjpbMTEwMjI5NTg5Nyw4NTUzMTA3MzIsLTE1Nz
 U5NzU1MTgsMjAyNjM3MzE1LC0xNTk2NDY2MDAwXX0=
 -->
