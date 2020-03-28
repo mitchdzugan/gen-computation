@@ -12,6 +12,11 @@
 }
 ```
 
+the rest of the api functions are as follows, no typing is enforced but for the purposes of explaining the types of the api functions. We will use the following types:
+```
+	R // 
+```
+
 monad control flow is obtained using generators. for example:
 
 ```javascript
@@ -20,5 +25,6 @@ const comp = (function* () {
 })();
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjAyNjM3MzE1LC0xNTk2NDY2MDAwXX0=
+eyJoaXN0b3J5IjpbMTgzMjYxNzEzMCwyMDI2MzczMTUsLTE1OT
+Y0NjYwMDBdfQ==
 -->
