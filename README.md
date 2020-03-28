@@ -4,11 +4,13 @@
 	success: Boolean,  // true if `comp` was run in its entirety
 	                   // without `fail` being called
 	result: Any,       // value returned by `comp`
-	error: Any,        // 
+	error: Any,        // value supplied to `fail` if it was called
 	state: Any,        // value of state monad at the end of `comp`
-	writer: Array[Any] //
+	writer: Array[Any] // array containing every value that supplied
+	                   // to `tell` in order during the execution
+	                   // of `comp`
 }
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM1MjMzNzk1MywtMTU5NjQ2NjAwMF19
+eyJoaXN0b3J5IjpbMjAyNjExODg4MCwtMTU5NjQ2NjAwMF19
 -->
