@@ -12,12 +12,18 @@
 }
 ```
 
-the rest of the api functions are as follows, no typing is enforced but for the purposes of explaining the types of the api functions. We will use the following types:
+No typing is enforced but for the purposes of explaining the types of the api functions. We will use the following types:
 ```javascript
 	R // represents the type of the object `env` passed to `exec`
 	S // represents the type of the state, initially 
 	  // supplied to `exec` as `initialState`
-	W // 
+	W // represents the type of objects written to the writer array via `tell`
+	E // represents the type of errors thrown by `fail`
+```
+
+The rest of the API functions are as follows:
+```javascript
+
 ```
 
 monad control flow is obtained using generators. for example:
@@ -28,6 +34,6 @@ const comp = (function* () {
 })();
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTcwOTM5NDA5NiwyMDI2MzczMTUsLTE1OT
-Y0NjYwMDBdfQ==
+eyJoaXN0b3J5IjpbMjM4MzM3NTg4LDIwMjYzNzMxNSwtMTU5Nj
+Q2NjAwMF19
 -->
