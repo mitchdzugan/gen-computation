@@ -24,7 +24,9 @@ No typing is enforced but for the purposes of explaining the types of the api fu
 The rest of the API functions are as follows:
 ```javascript
 ask() => R // yields the value stored in the reader environment
-asks(R => a) => a // 
+asks(R => a) => a // given a function, yields the result of applying
+                  // that function to the value in the reader environment
+tell(W) => null // a
 ```
 
 monad control flow is obtained using generators. for example:
@@ -35,6 +37,6 @@ const comp = (function* () {
 })();
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDk5MzkzNjg3LDIwMjYzNzMxNSwtMTU5Nj
-Q2NjAwMF19
+eyJoaXN0b3J5IjpbMTYxMDgyNzM2MCwyMDI2MzczMTUsLTE1OT
+Y0NjYwMDBdfQ==
 -->
