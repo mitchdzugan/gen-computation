@@ -35,7 +35,9 @@ modify(S => S) => null // sets the current state of the state monad to the resul
                        // of applying the supplied function to the current state
 ```
 
-monad control flow is obtained using generators. for example:
+monad control flow is obtained using generators. 
+
+Here is an example predominantly using
 
 ```javascript
 const comp = (function* () {
@@ -43,6 +45,6 @@ const comp = (function* () {
 })();
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTI0MzIwMTEyLDIwMjYzNzMxNSwtMTU5Nj
-Q2NjAwMF19
+eyJoaXN0b3J5IjpbLTE1NjE0NTQ0MDIsMjAyNjM3MzE1LC0xNT
+k2NDY2MDAwXX0=
 -->
