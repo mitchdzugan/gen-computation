@@ -12,7 +12,13 @@
 }
 ```
 
-monad control flow is obtained using generators. 
+monad control flow is obtained using generators. for example:
+
+```javascript
+const comp = (function* () {
+	
+})();
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExNjc3MTczOCwtMTU5NjQ2NjAwMF19
+eyJoaXN0b3J5IjpbMjAyNjM3MzE1LC0xNTk2NDY2MDAwXX0=
 -->
